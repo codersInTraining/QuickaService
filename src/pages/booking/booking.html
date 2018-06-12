@@ -1,0 +1,86 @@
+<!--
+  Generated template for the BookingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title>Booking</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <!-- A form to make a new booking-->
+  <form id="bookingForm" [formGroup]="bookingForm" novalidate>
+    
+      <ion-item>
+              <ion-label>Service Center </ion-label>
+              <ion-input type="text" [(ngModel)]="bookingInfo.serviceCenter" formControlName="company"  ></ion-input>
+      </ion-item>
+
+       <!--If this first name field is touched and not filled displays a text saying the field is mandatory-->
+      <ion-item *ngIf="bookingForm.controls['company'].hasError('required')  && bookingForm.controls['company'].touched">
+              <p>* Service Center is required</p>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Vehicle Number</ion-label>
+          <ion-input type="text" [(ngModel)]="bookingInfo.vehNo" formControlName="vehNo"  ></ion-input>
+      </ion-item>
+
+       <!--If this last name field is touched and not filled displays a text saying the field is mandatory-->
+      <ion-item *ngIf="bookingForm.controls['vehNo'].hasError('required')  && bookingForm.controls['vehNo'].touched">
+              <p>*Vehicle Number is required</p>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label>Service Type </ion-label>
+          <ion-input type="text" [(ngModel)]="bookingInfo.serviceType" formControlName="serviceType"  ></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="bookingForm.controls['serviceType'].hasError('required')  && bookingForm.controls['serviceType'].touched">
+          <p>*Service Type is required</p>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Date </ion-label>
+      <ion-input type="text" [(ngModel)]="bookingInfo.date" formControlName="date"  ></ion-input>
+  </ion-item>
+
+  <!-- <ion-item *ngIf="bookingForm.controls['date'].hasError('required')  && bookingForm.controls['date'].touched">
+      <p>*date is required</p>
+</ion-item> -->
+
+<ion-item>
+    <ion-label>Time </ion-label>
+    <ion-input type="text" [(ngModel)]="bookingInfo.time" formControlName="time"  ></ion-input>
+</ion-item>
+
+<ion-item *ngIf="bookingForm.controls['time'].hasError('required')  && bookingForm.controls['time'].touched">
+    <p>*Time is required</p>
+</ion-item>
+
+
+<ion-item>
+    <ion-label>Pick-up Location </ion-label>
+    <ion-input type="text" [(ngModel)]="bookingInfo.pickLocation" formControlName="pickLocation"  ></ion-input>
+</ion-item>
+
+<ion-item *ngIf="bookingForm.controls['pickLocation'].hasError('required')  && bookingForm.controls['pickLocation'].touched">
+    <p>*Pick-up Location is required</p>
+</ion-item>
+
+
+<ion-item>
+    <button ion-button small color="orange"(click)="makeBooking()" type="submit" [disabled]="!bookingForm.valid">Add Member</button> &nbsp;&nbsp;&nbsp;&nbsp;
+    <button ion-button small color="orange"(click)="cancel()">Cancel</button>
+</ion-item>
+      </form>
+    </ion-card>
+</ion-content>
