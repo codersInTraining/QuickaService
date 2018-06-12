@@ -1,0 +1,8 @@
+{
+  "name": "QuickaService",
+  "app_id": "b5ae08ae",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
