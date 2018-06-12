@@ -8,7 +8,7 @@ export interface booking{
     time:Time
     date:DateTime
     pickLocation:String
+    dropLocation : string
     serviceCenter:String
     serviceType:String
-    
 }
