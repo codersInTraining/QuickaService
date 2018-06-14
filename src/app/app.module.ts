@@ -12,6 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //geolocation
 import {Geolocation} from '@ionic-native/geolocation';
+import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -32,9 +34,10 @@ import {Geolocation} from '@ionic-native/geolocation';
   ],
   providers: [
     StatusBar,
-    
     SplashScreen,
+    NativeGeocoder,
     
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

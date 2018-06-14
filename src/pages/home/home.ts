@@ -5,6 +5,8 @@ import {Geolocation } from '@ionic-native/geolocation';
 import { GeolocationMarker } from 'geolocation-marker';
 
 
+
+
 import {
  GoogleMaps,
  GoogleMap,
@@ -87,10 +89,11 @@ export class HomePage {
  
 
  goToBooking(){
-  
    this.location=this.marker.position;
-   alert(this.location);
-   this.navCtrl.push(BookingPage);
+   //alert(this.location);
+   this.navCtrl.push(BookingPage, {
+    locationPicked:this.location
+  });
 
  }
  
