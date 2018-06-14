@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, Icon } from 'ionic-angular';
 
 import {Geolocation } from '@ionic-native/geolocation';
 import { GeolocationMarker } from 'geolocation-marker';
@@ -34,6 +34,7 @@ export class HomePage {
   longitude:number;
   //variable to mark the location of the user 
   marker:any;
+  location:any;
   constructor(public navCtrl: NavController) {
    
   }
@@ -64,8 +65,7 @@ export class HomePage {
      
        this.marker = new google.maps.Marker({
       map: this.map,
-      draggable:true,
-     
+      draggable:true,     
       animation: google.maps.Animation.DROP,
       position: new google.maps.LatLng(this.latitude, this.longitude)
       });
@@ -87,7 +87,9 @@ export class HomePage {
  
 
  goToBooking(){
-   alert(this.marker.position);
+  
+   this.location=this.marker.position;
+   alert(this.location);
    this.navCtrl.push(BookingPage);
 
  }
