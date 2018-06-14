@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
+//geolocation
+import {Geolocation} from '@ionic-native/geolocation';
 @Component({
   templateUrl: 'app.html'
 })
