@@ -1,0 +1,38 @@
+page-driver {
+    ion-content{
+        background-image: url('../../assets/imgs/bg1.jpg');
+    }
+    #cusDetails{
+        background-color: chocolate;
+        font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 
+        
+        
+    }
+    h3{
+        position: relative;
+        top:5px;
+        left: 50px;
+        color: white;
+    }
+   
+    #VehStatus{
+        background-color: chocolate;
+        font-family:  'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 
+    }
+    h2{
+        color:white;
+        position: relative;
+        top:5px;
+        left:100px;
+    }
+    #statusLogo{
+        position: relative;
+        top:65px;
+        left:-60px;
+    }
+    #status{
+        position: relative;
+        left:50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+}

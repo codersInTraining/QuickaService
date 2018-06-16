@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {BookingPage} from '../pages/booking/booking';
+import { DriverPage } from '../pages/driver/driver';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     MyApp,
     HomePage,
     ListPage,
-    BookingPage
+    BookingPage,
+    DriverPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResul
     MyApp,
     HomePage,
     ListPage,
-    BookingPage
+    BookingPage,
+    DriverPage
   ],
   providers: [
     StatusBar,
